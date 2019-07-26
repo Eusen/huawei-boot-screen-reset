@@ -1,0 +1,2 @@
+# huawei_boot_screen_upgrade
+华为笔记本开机画面替换
