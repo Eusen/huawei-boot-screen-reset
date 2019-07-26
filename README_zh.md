@@ -1,5 +1,7 @@
 # 华为笔记本开机画面替换
 
+[English Doc](https://github.com/Eusen/huawei_boot_screen_upgrade/blob/master/README.md)
+
 ### 背景
 
 由于 Huawei Magic Book 电脑管家可以自定义开机画面，但是有些图片已经有新的替代品却没有被替换。研究后发现替换指定图片就可以达到修改的目的，所以就写了一个脚本，批量进行替换。

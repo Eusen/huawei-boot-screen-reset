@@ -1,6 +1,6 @@
 # Huawei Notebook Boot Screen Replacement
 
-
+[简体中文文档](https://github.com/Eusen/huawei_boot_screen_upgrade/blob/master/README_zh.md)
 
 ### Background
 
