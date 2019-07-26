@@ -28,9 +28,10 @@ const fileMap = {
     [logoPath, previewPath].forEach((targetPath, index) => {
         const ext = exts[index];
         Object.keys(fileMap).forEach(oldBmp => {
+            const oldBmpPath = $path.join(targetPath, `${oldBmp}.${ext}`);
+            const oldBmpBackupPath = $path.join(targetPath, `${oldBmp}_backup.${ext}`);
+
             if (backup) {
-                const oldBmpPath = $path.join(targetPath, `${oldBmp}.${ext}`);
-                const oldBmpBackupPath = $path.join(targetPath, `${oldBmp}_backup.${ext}`);
                 // remove new file
                 $fs.unlinkSync(oldBmpPath);
                 // rename *_backup.bmp to *.bmp
@@ -38,9 +39,6 @@ const fileMap = {
             } else {
                 const newBmp = fileMap[oldBmp];
                 const newBmpPath = $path.join(targetPath, `${newBmp}.${ext}`);
-
-                const oldBmpPath = $path.join(targetPath, `${oldBmp}.${ext}`);
-                const oldBmpBackupPath = $path.join(targetPath, `${oldBmp}_backup.${ext}`);
                 // backup
                 $fs.renameSync(oldBmpPath, oldBmpBackupPath);
                 // copy new file with old name
